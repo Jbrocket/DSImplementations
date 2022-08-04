@@ -65,11 +65,16 @@ void sllist<T>::printList(){
     }
 
     node_type *ptr = this->head;
-    std::cout << "\n";
+    std::cout << "\nCurrent List: ";
     do{
         std::cout << ptr->data << " ";
         ptr = ptr->next;
     } while( ptr != NULL);
     std::cout << "\n" << "\n";
     return;
+}
+
+template <typename T>
+int sllist<T>::size(){
+    return length;
 }
