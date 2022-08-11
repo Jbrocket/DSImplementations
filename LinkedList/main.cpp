@@ -5,9 +5,9 @@ int main(){
     int pos;
     // sllist<int> *myList = new sllist<int>();
     // sllist<int> newList = *myList;
-    sllist<int> newList;
+    sllist<std::string> newList;
 
-    int data;
+    std::string data;
     do{
         std::cout << "1. Insert Right" << std::endl;
         std::cout << "2. Insert Left" << std::endl;
