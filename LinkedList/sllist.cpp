@@ -156,6 +156,37 @@ void sllist<T>::removeNodeByValue(const_reference_type value){
 
 template <typename T>
 void sllist<T>::removeNodeByIndex(int pos){
+    if(pos < 0 || pos > this->length - 1){
+        std::cout << "Enter a valid index" << std::endl;
+    }
+    int curPos = 0;
+    node_type *temp = this->head;
+    while(curPos < pos - 1){
+        curPos++;
+        temp = temp->next;
+    }
+
+    this->length--;
+    if(!temp->next){
+        this->head = NULL;
+        this->tail = NULL;
+        delete temp;
+    }
+    else if(pos == 0){
+        this->head = temp->next;
+        delete temp;
+    }
+    else if(!temp->next->next){
+        node_type *dlt = temp->next;
+        this->tail = temp;
+        temp->next = NULL;
+        delete dlt;
+    }
+    else{
+        node_type *dlt = temp->next;
+        temp->next = temp->next->next;
+        delete dlt;
+    }
 
     return;
 }
