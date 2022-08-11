@@ -29,8 +29,9 @@ class sllist{
         int insertLeft(const_reference_type data);
         void printList();
         int size();
-        void removeNode(int pos);
-        void insertAt(int pos);
+        void removeNodeByValue(const_reference_type data);
+        void removeNodeByIndex(int pos);
+        void insertAt(int pos, const_reference_type data);
 };
 
 #endif
