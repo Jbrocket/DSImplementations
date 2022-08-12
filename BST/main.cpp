@@ -22,22 +22,28 @@ int main(){
                 myBST.insertNode(data);
                 break;
             case 2:
-                std::cout << std::endl;
+                std::cout << std::endl << "pre order:";
                 myBST.preOrder();
+                std::cout << std::endl;
                 std::cout << std::endl;
                 break;
             case 3:
-                std::cout << std::endl;
+                std::cout << std::endl << "in order:";
                 myBST.inOrder();
+                std::cout << std::endl;
                 std::cout << std::endl;
                 break;
             case 4:
-                std::cout << std::endl;
+                std::cout << std::endl << "post order:";
                 myBST.postOrder();
+                std::cout << std::endl;
                 std::cout << std::endl;
                 break;
             case 5:
-            
+                std::cout << std::endl << "level order:";
+                myBST.levelOrder();
+                std::cout << std::endl;
+                std::cout << std::endl;
                 break;
             default:
                 return 0;

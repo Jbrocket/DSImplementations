@@ -1,16 +1,32 @@
-all: sllist bst
+CMP = g++ -std=c++2a
+OBJ = obj
+EXE = exe
 
+all: $(EXE)/sllist $(EXE)/bst
+
+## CREATE DIRECTORIES FOR COMPILED FILES
 init:
-	mkdir exe
+	mkdir exe obj
 
-sllist: LinkedList/main.cpp Linkedlist/sllist.cpp
-	g++ LinkedList/main.cpp Linkedlist/sllist.cpp -o exe/sllist
+## RULES FOR SINGLY LINKED LIST
+$(EXE)/sllist: LinkedList/main.cpp $(OBJ)/sllist.o
+	$(CMP) LinkedList/main.cpp $(OBJ)/sllist.o -o $(EXE)/sllist
 
-bst: BST/main.cpp BST/bst.cpp
-	g++ BST/main.cpp BST/bst.cpp -o exe/bst
+$(OBJ)/sllist.o: LinkedList/sllist.cpp LinkedList/sllist.h
+	$(CMP) -c LinkedList/sllist.cpp -o $(OBJ)/sllist.o
 
+## RULES FOR BINARY SEARCH TREE
+$(EXE)/bst: BST/main.cpp $(OBJ)/bst.o
+	$(CMP) BST/main.cpp $(OBJ)/bst.o -o $(EXE)/bst
+
+$(OBJ)/bst.o: BST/bst.cpp BST/bst.h
+	$(CMP) -c BST/bst.cpp -o $(OBJ)/bst.o
+
+
+## CLEAN EXECUTABLES OUT
 clean:
-	rm -rf ./exe/*
+	rm -rf ./$(EXE)/* ./$(OBJ)/*
 
-clean_exe:
-	rm -rf ./exe
+## GET RID OF ALL CREATED FOLDERS AND FILES
+sterilize:
+	rm -rf ./$(EXE) ./$(OBJ)

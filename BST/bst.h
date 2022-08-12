@@ -1,6 +1,9 @@
 #ifndef BST_H
 #define BST_H
 
+#include <iostream>
+#include <queue>
+
 template <typename T>
 struct node{
     T data;
@@ -40,7 +43,6 @@ class bst{
         void postOrderDelete(node_pointer node);
 
         // BFS related searches
-        void levelOrder(node_pointer node);
         void levelOrder();
         int height();
         void removeNodeByValue(const_reference_type data);

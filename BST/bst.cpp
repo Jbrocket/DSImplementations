@@ -1,5 +1,4 @@
 #include "bst.h"
-#include <iostream>
 
 template <typename T>
 bst<T>::bst() {
@@ -108,5 +107,29 @@ void bst<T>::inOrder(){
 template <typename T>
 void bst<T>::postOrder(){
     postOrder(this->root);
+    return;
+}
+
+template <typename T>
+void bst<T>::levelOrder(){
+    int size = 1;
+    std::queue<node_pointer> queue;
+    queue.push(this->root);
+
+    while(!queue.empty()){
+        size = queue.size();
+        for(int i = 0; i < size; i++){
+
+            if(queue.front()->left)
+                queue.push(queue.front()->left);
+            if(queue.front()->right)  
+                queue.push(queue.front()->right);
+            std::cout << " " << queue.front()->data;
+            queue.pop();
+        }
+        if(!queue.empty())
+            std::cout << " | ";
+    }
+
     return;
 }
