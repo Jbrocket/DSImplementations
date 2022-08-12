@@ -8,19 +8,22 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Thu Aug 11 08:55:48 2022
+# Make data base, printed on Fri Aug 12 10:44:54 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
- 
 # automatic
 ?F = $(notdir $?)
+# makefile (from `Makefile', line 2)
+OBJ = obj
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
+# makefile (from `Makefile', line 3)
+EXE = exe
 # automatic
 @F = $(notdir $@)
 # makefile
@@ -33,6 +36,8 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 1)
+CMP = g++ -std=c++2a
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
@@ -40,15 +45,17 @@ VSCODE_CWD = /
 # environment
 PATH = /Users/jonathanbrockett/opt/anaconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin
 # environment
+LaunchInstanceID = A1632532-B9BA-4307-B230-9ECB31735829
+# environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.NY0FRtb1bV/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.O3WISOfFG5/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = /private/tmp/com.apple.launchd.E74ZNdu8FW/org.xquartz:0
+DISPLAY = /private/tmp/com.apple.launchd.u7TLt8AeVn/org.xquartz:0
 # environment
 PWD = /Users/jonathanbrockett/Documents/dSImplementations
 # environment
@@ -70,6 +77,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
+ 
 XPC_FLAGS = 0x0
 # default
 MAKE = $(MAKE_COMMAND)
@@ -119,6 +127,8 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a6
 # automatic
 ^F = $(notdir $^)
 # default
@@ -130,9 +140,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 79961
+VSCODE_PID = 479
 # variable set hash-table stats:
-# Load=59/1024=6%, Rehash=0, Collisions=1/85=1%
+# Load=64/1024=6%, Rehash=0, Collisions=6/96=6%
 
 # Pattern-specific Variable Values
 
@@ -140,9 +150,9 @@ VSCODE_PID = 79961
 
 # Directories
 
-# . (device 16777223, inode 41901596): 7 files, no impossibilities.
+# . (device 16777221, inode 41901596): 9 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -150,20 +160,66 @@ VSCODE_PID = 79961
 
 # Files
 
-all: sllist
+exe/sllist: LinkedList/main.cpp obj/sllist.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-12 10:44:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 13):
+	$(CMP) LinkedList/main.cpp $(OBJ)/sllist.o -o $(EXE)/sllist
+	
+
+all: exe/sllist exe/bst
 #  Command-line target.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
-#  Needs to be updated (-q is set).
+#  Successfully updated.
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/2=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
- 
-Linkedlist/sllist.cpp:
+LinkedList/sllist.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-11 08:53:53
+#  Last modified 2022-08-11 08:45:47
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+BST/bst.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-12 10:30:35
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+LinkedList/sllist.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 14:59:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+BST/main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-12 10:41:00
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+BST/bst.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-12 10:42:40
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -178,11 +234,33 @@ Linkedlist/sllist.cpp:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-11 08:55:42
+#  Last modified 2022-08-12 10:44:51
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/bst.o: BST/bst.cpp BST/bst.h
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-12 10:44:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 23):
+	$(CMP) -c BST/bst.cpp -o $(OBJ)/bst.o
+	
+
+obj/sllist.o: LinkedList/sllist.cpp LinkedList/sllist.h
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-12 10:44:48
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 16):
+	$(CMP) -c LinkedList/sllist.cpp -o $(OBJ)/sllist.o
+	
 
 # Not a target:
 .DEFAULT:
@@ -190,69 +268,53 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-clean_exe:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 13):
-	rm -rf ./exe
-	
-
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 10):
-	rm -rf ./exe/*
+#  commands to execute (from `Makefile', line 28):
+	rm -rf ./$(EXE)/* ./$(OBJ)/*
 	
 
-sllist: LinkedList/main.cpp Linkedlist/sllist.cpp
+sterilize:
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: `'
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := sllist
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := LinkedList/main.cpp Linkedlist/sllist.cpp
-# automatic
-# | := 
-# automatic
-# < := LinkedList/main.cpp
-# automatic
-# ^ := LinkedList/main.cpp Linkedlist/sllist.cpp
-# automatic
-# ? := LinkedList/main.cpp Linkedlist/sllist.cpp
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/10=10%
-#  commands to execute (from `Makefile', line 7):
-	g++ LinkedList/main.cpp Linkedlist/sllist.cpp -o exe/sllist
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 32):
+	rm -rf ./$(EXE) ./$(OBJ)
 	
 
 init:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 4):
-	mkdir exe
+#  commands to execute (from `Makefile', line 9):
+	mkdir exe obj
+	
+
+exe/bst: BST/main.cpp obj/bst.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-12 10:44:50
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 20):
+	$(CMP) BST/main.cpp $(OBJ)/bst.o -o $(EXE)/bst
 	
 
 # Not a target:
 LinkedList/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-11 08:52:14
+#  Last modified 2022-08-11 15:03:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=10/1024=1%, Rehash=0, Collisions=0/27=0%
+# Load=17/1024=2%, Rehash=0, Collisions=0/40=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -264,6 +326,6 @@ LinkedList/main.cpp:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Aug 11 08:55:48 2022
+# Finished Make data base on Fri Aug 12 10:44:54 2022
 
  
