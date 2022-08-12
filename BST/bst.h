@@ -25,9 +25,22 @@ class bst{
         virtual ~bst();
 
         void insertNode(const_reference_type data);
+
+        // Standard tree traversals
+        void preOrder(node_pointer node);
+        void inOrder(node_pointer node);
+        void postOrder(node_pointer node);
+
+        // Overloaded to call the function above with this->root
         void preOrder();
         void inOrder();
         void postOrder();
+
+        // Used to deconstruct
+        void postOrderDelete(node_pointer node);
+
+        // BFS related searches
+        void levelOrder(node_pointer node);
         void levelOrder();
         int height();
         void removeNodeByValue(const_reference_type data);
