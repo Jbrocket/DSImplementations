@@ -117,7 +117,7 @@ void bst<T>::levelOrder(){
     queue.push(this->root);
 
     while(!queue.empty()){
-        size = queue.size();
+        size = (int) queue.size();
         for(int i = 0; i < size; i++){
 
             if(queue.front()->left)
