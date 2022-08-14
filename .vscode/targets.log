@@ -6,9 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Fri Aug 12 19:27:10 2022
+# Make data base, printed on Sat Aug 13 19:25:27 2022
 
 # Variables
 
@@ -37,7 +36,6 @@ _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # makefile (from `Makefile', line 1)
- 
 CMP = g++ -std=c++2a
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
@@ -46,17 +44,17 @@ VSCODE_CWD = /
 # environment
 PATH = /Users/jonathanbrockett/opt/anaconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin
 # environment
-LaunchInstanceID = A1632532-B9BA-4307-B230-9ECB31735829
+LaunchInstanceID = 13A0692D-C2A7-481E-B70B-11D344A2CBAB
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.O3WISOfFG5/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.iGeYpyd9mi/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = /private/tmp/com.apple.launchd.u7TLt8AeVn/org.xquartz:0
+DISPLAY = /private/tmp/com.apple.launchd.plXOspDOgU/org.xquartz:0
 # environment
 PWD = /Users/jonathanbrockett/Documents/dSImplementations
 # environment
@@ -68,7 +66,7 @@ HOME = /Users/jonathanbrockett
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/jonathanbrockett/Library/Application Support/Code/CachedData/da76f93349a72022ca4670c1b84860304616aaa2
+VSCODE_CODE_CACHE_PATH = /Users/jonathanbrockett/Library/Application Support/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
 # environment
 LOGNAME = jonathanbrockett
 # environment
@@ -102,8 +100,7 @@ TMPDIR = /var/folders/wk/svw3mhp164x83cz3wp0r95l40000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
- 
-VSCODE_IPC_HOOK = /Users/jonathanbrockett/Library/Application Support/Code/1.70.0-main.sock
+VSCODE_IPC_HOOK = /Users/jonathanbrockett/Library/Application Support/Code/1.70.1-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -113,7 +110,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.42430392.42430398
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.42667142.42667148
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -129,7 +126,7 @@ MAKEFILES :=
 # environment
 LC_ALL = C
 # environment
-SECURITYSESSIONID = 186a6
+SECURITYSESSIONID = 186c3
 # automatic
 ^F = $(notdir $^)
 # default
@@ -143,7 +140,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 479
+VSCODE_PID = 838
 # variable set hash-table stats:
 # Load=65/1024=6%, Rehash=0, Collisions=7/101=7%
 
@@ -153,7 +150,7 @@ VSCODE_PID = 479
 
 # Directories
 
-# . (device 16777221, inode 41901596): 7 files, no impossibilities.
+# . (device 16777220, inode 41901596): 7 files, no impossibilities.
 
 # 7 files, no impossibilities in 1 directories.
 
@@ -162,7 +159,6 @@ VSCODE_PID = 479
 # No implicit rules.
 
 # Files
- 
 
 exe/sllist: LinkedList/main.cpp obj/sllist.o
 #  Implicit rule search has not been done.
@@ -272,7 +268,6 @@ obj/sllist.o: LinkedList/sllist.cpp LinkedList/sllist.h
 	
 
 # Not a target:
- 
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -288,12 +283,12 @@ clean:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 33):
- 
 	rm -rf ./$(EXE)/* ./$(OBJ)/*
 	
 
 sterilize:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 37):
@@ -346,6 +341,6 @@ LinkedList/main.cpp:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Aug 12 19:27:10 2022
+# Finished Make data base on Sat Aug 13 19:25:27 2022
 
  
