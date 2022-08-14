@@ -23,8 +23,8 @@ class dllist {
         node_pointer head;
         int length;
     public:
-        sllist();
-        virtual ~sllist();
+        dllist();
+        virtual ~dllist();
 
         int insertRight(const_reference_type data);
         int insertLeft(const_reference_type data);
