@@ -74,4 +74,4 @@ clean:
 
 ## GET RID OF ALL CREATED FOLDERS AND FILES
 sterilize:
-	rm -rf ./$(EXE) ./$(OBJ)
+	rm -rf ./$(EXE) ./$(OBJ) ./.vscode
