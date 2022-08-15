@@ -1,8 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/jonathanbrockett/Documents/dSImplementations'
-g++ -std=c++2a -c LinkedList/sllist.cpp -o obj/sllist.o
-g++ -std=c++2a -Werror -Wextra -O2 -Wconversion -Wall LinkedList/main.cpp obj/sllist.o -o exe/sllist
-g++ -std=c++2a -c BST/bst.cpp -o obj/bst.o
-g++ -std=c++2a -Werror -Wextra -O2 -Wconversion -Wall BST/main.cpp obj/bst.o -o exe/bst
-make: Leaving directory `/Users/jonathanbrockett/Documents/dSImplementations'
- 
