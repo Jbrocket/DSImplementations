@@ -65,14 +65,21 @@ void dllist<T>::printList(){
     node_pointer cur = this->head;
 
     if(!cur){
-        std::cout << "No nodes to print" << std::endl;
+        std::cout << "[]";
         return;
     }
 
+    std::cout << "[";
     while(cur != NULL){
-        std::cout << " " << cur->data;
+        if(cur == this->head)
+            std::cout << cur->data;
+        else
+            std::cout << " " << cur->data;
+        if(cur->next)
+            std::cout << ",";
         cur = cur->next;
     }
+    std::cout << "]";
 
     return;
 }
@@ -82,14 +89,21 @@ void dllist<T>::printReverse(){
     node_pointer cur = this->tail;
 
     if(!cur){
-        std::cout << "No nodes to print" << std::endl;
+        std::cout << "[]";
         return;
     }
 
+    std::cout << "[";
     while(cur != NULL){
-        std::cout << " " << cur->data;
+        if(cur == this->tail)
+            std::cout << cur->data;
+        else
+            std::cout << " " << cur->data;
+        if(cur->prev)
+            std::cout << ",";
         cur = cur->prev;
     }
+    std::cout << "]";
 
     return;
 }
