@@ -1,6 +1,8 @@
 #ifndef DLLIST_H
 #define DLLIST_H
 
+#include <iostream>
+
 template <typename T>
 struct node{
     T data;
@@ -26,9 +28,10 @@ class dllist {
         dllist();
         virtual ~dllist();
 
-        int insertRight(const_reference_type data);
-        int insertLeft(const_reference_type data);
+        void insertRight(const_reference_type data);
+        void insertLeft(const_reference_type data);
         void printList();
+        void printReverse();
         int size();
         void removeNodeByValue(const_reference_type data);
         void removeNodeByIndex(int pos);
