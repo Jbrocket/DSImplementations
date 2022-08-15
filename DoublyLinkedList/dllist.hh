@@ -33,6 +33,7 @@ class dllist {
         void printList();
         void printReverse();
         int size();
+        void reverseList();
         void removeNodeByValue(const_reference_type data);
         void removeNodeByIndex(int pos);
         void insertAt(int pos, const_reference_type data);
