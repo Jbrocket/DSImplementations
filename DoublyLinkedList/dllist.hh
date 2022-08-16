@@ -2,6 +2,7 @@
 #define DLLIST_H
 
 #include <iostream>
+#include <string>
 
 template <typename T>
 struct node{
@@ -30,13 +31,15 @@ class dllist {
 
         void insertRight(const_reference_type data);
         void insertLeft(const_reference_type data);
-        void printList();
-        void printReverse();
+        std::string printList();
+        std::string printReverse();
         int size();
         void reverseList();
         void removeNodeByValue(const_reference_type data);
         void removeNodeByIndex(int pos);
         void insertAt(int pos, const_reference_type data);
+
+friend  std::ostream& operator<<(std::ostream& os, const dllist<value_type>& list);
 };
 
 #endif
