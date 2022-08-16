@@ -62,51 +62,43 @@ void dllist<T>::insertLeft(const_reference_type data){
 }
 
 template <typename T>
-void dllist<T>::printList(){
+std::string dllist<T>::printList(){
     node_pointer cur = this->head;
+    std::string ret = "";
 
     if(!cur){
-        std::cout << "[]";
-        return;
+        return "[]";
     }
 
-    std::cout << "[";
+    ret.append("[" + std::to_string(cur->data));
+    cur = cur->next;
     while(cur != NULL){
-        if(cur == this->head)
-            std::cout << cur->data;
-        else
-            std::cout << " " << cur->data;
-        if(cur->next)
-            std::cout << ",";
+        ret.append(", " + std::to_string(cur->data));
         cur = cur->next;
     }
-    std::cout << "]";
+    ret.append("]");
 
-    return;
+    return ret;
 }
 
 template <typename T>
-void dllist<T>::printReverse(){
+std::string dllist<T>::printReverse(){
     node_pointer cur = this->tail;
+    std::string ret = "";
 
     if(!cur){
-        std::cout << "[]";
-        return;
+        return "[]";
     }
 
-    std::cout << "[";
+    ret.append("[" + std::to_string(cur->data));
+    cur = cur->prev;
     while(cur != NULL){
-        if(cur == this->tail)
-            std::cout << cur->data;
-        else
-            std::cout << " " << cur->data;
-        if(cur->prev)
-            std::cout << ",";
+        ret.append(", " + std::to_string(cur->data));
         cur = cur->prev;
     }
-    std::cout << "]";
+    ret.append("]");
 
-    return;
+    return ret;
 }
 
 template <typename T>
@@ -267,4 +259,13 @@ void dllist<T>::removeNodeByIndex(int pos){
     }
 
     return;
+}
+
+template <typename T>
+std::ostream& operator<<(std::ostream& os, const dllist<T>& list){
+
+
+    os << list.head->data;
+
+    return os;
 }

@@ -5,18 +5,19 @@ int main(){
 
     dllist<int> list;
 
+    std::system("clear");
     do{
         std::system("clear");
         if(!reverse){
-            std::cout << "\n";
-            list.printList();
+            std::cout << "\n" << list.printList();
             if(length)
                 std::cout << "\nLength of list: " << list.size();
             std::cout << "\n\n";
         }
         else{
-            std::cout << "\n";
-            list.printReverse();
+            std::cout << "\n" << list.printReverse();
+            if(length)
+                std::cout << "\nLength of list: " << list.size();
             std::cout << "\n\n";
         }
         std::cout << "1: Insert node to right" << std::endl;
